@@ -1,0 +1,8 @@
+{
+  "name": "hotelInventory",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "5dffb93c"
+}
