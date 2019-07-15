@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<br><br><br><br><br>\n<ion-header>\n  <ion-toolbar>\n    <ion-title>Category List</ion-title>\n  </ion-toolbar>\n</ion-header>"
+module.exports = "<app-header></app-header>\n<ion-content>\n  <ion-card color=\"primary\">\n    <ion-card-header>\n      <ion-card-title>Categories</ion-card-title>\n    </ion-card-header>\n    <ion-list (click)='presentActionSheet()'>\n      <ion-item >\n        <ion-label>1</ion-label>\n        <ion-label>Cold Drink</ion-label>\n      </ion-item>\n      <ion-item>\n        <ion-label>2</ion-label>\n        <ion-label>Beer</ion-label>\n      </ion-item>\n      <ion-item>\n        <ion-label>3</ion-label>\n        <ion-label>Hard Drink</ion-label>\n      </ion-item>\n    </ion-list>\n  </ion-card>\n</ion-content>"
 
 /***/ }),
 
@@ -34,19 +34,64 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CategoryListComponent", function() { return CategoryListComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+
 
 
 var CategoryListComponent = /** @class */ (function () {
-    function CategoryListComponent() {
+    function CategoryListComponent(actionSheetController) {
+        this.actionSheetController = actionSheetController;
     }
-    CategoryListComponent.prototype.ngOnInit = function () { };
+    CategoryListComponent.prototype.presentActionSheet = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var actionSheet;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.actionSheetController.create({
+                            header: 'Actions',
+                            mode: 'md',
+                            buttons: [{
+                                    text: 'Delete',
+                                    role: 'destructive',
+                                    icon: 'trash',
+                                    handler: function () {
+                                        console.log('Delete clicked');
+                                    }
+                                }, {
+                                    text: 'Edit',
+                                    icon: 'create',
+                                    handler: function () {
+                                        console.log('Edit clicked');
+                                    }
+                                }, {
+                                    text: 'Cancel',
+                                    icon: 'close',
+                                    role: 'cancel',
+                                    handler: function () {
+                                        console.log('Cancel clicked');
+                                    }
+                                }
+                            ]
+                        })];
+                    case 1:
+                        actionSheet = _a.sent();
+                        return [4 /*yield*/, actionSheet.present()];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    CategoryListComponent.prototype.ngOnInit = function () {
+    };
     CategoryListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-category-list',
             template: __webpack_require__(/*! ./category-list.component.html */ "./src/app/modules/category/category-list/category-list.component.html"),
             styles: [__webpack_require__(/*! ./category-list.component.scss */ "./src/app/modules/category/category-list/category-list.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ActionSheetController"]])
     ], CategoryListComponent);
     return CategoryListComponent;
 }());
@@ -74,7 +119,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var categoryRoutes = [
-    { path: 'category', component: _category_list_category_list_component__WEBPACK_IMPORTED_MODULE_3__["CategoryListComponent"] }
+    { path: '', component: _category_list_category_list_component__WEBPACK_IMPORTED_MODULE_3__["CategoryListComponent"] }
 ];
 var CategoryRoutingModule = /** @class */ (function () {
     function CategoryRoutingModule() {
@@ -112,6 +157,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _category_list_category_list_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./category-list/category-list.component */ "./src/app/modules/category/category-list/category-list.component.ts");
 /* harmony import */ var _category_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./category-routing.module */ "./src/app/modules/category/category-routing.module.ts");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/shared/shared.module */ "./src/app/shared/shared.module.ts");
+
 
 
 
@@ -129,6 +176,7 @@ var CategoryModule = /** @class */ (function () {
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
                 _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["IonicModule"],
+                src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_6__["SharedModule"],
                 _category_routing_module__WEBPACK_IMPORTED_MODULE_4__["CategoryRoutingModule"],
             ]
         })

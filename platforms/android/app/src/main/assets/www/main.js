@@ -434,10 +434,12 @@ module.exports = webpackAsyncContext;
 var map = {
 	"./home/home.module": [
 		"./src/app/home/home.module.ts",
+		"common",
 		"home-home-module"
 	],
 	"./modules/category/category.module": [
 		"./src/app/modules/category/category.module.ts",
+		"common",
 		"modules-category-category-module"
 	]
 };
@@ -450,7 +452,7 @@ function webpackAsyncContext(req) {
 			throw e;
 		});
 	}
-	return __webpack_require__.e(ids[1]).then(function() {
+	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
 		var id = ids[0];
 		return __webpack_require__(id);
 	});
@@ -509,7 +511,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-header></app-header>\n<ion-app>\n  <ion-router-outlet id=\"first\"></ion-router-outlet>\n</ion-app>\n"
+module.exports = "<ion-app>\n  <ion-menu side=\"start\" contentId=\"first\">\n    <ion-header>\n      <ion-toolbar>\n        <ion-title>Menu</ion-title>\n      </ion-toolbar>\n    </ion-header>\n    <ion-content>\n      <ion-list>\n        <ion-item routerLink=\"/category\">Category</ion-item>\n        <ion-item>Product</ion-item>\n        <ion-item>Raw Material</ion-item>\n        <ion-item>Supplier</ion-item>\n        <ion-item>Purchase</ion-item>\n        <ion-item>Sales</ion-item>\n        <ion-item>Order</ion-item>\n        <ion-item>Inventory Items</ion-item>\n        <ion-item>Production</ion-item>\n        <ion-item>Reports</ion-item>\n        <ion-item>Setting</ion-item>\n      </ion-list>\n    </ion-content>\n  </ion-menu>\n  <ion-router-outlet id=\"first\"></ion-router-outlet>\n</ion-app>"
 
 /***/ }),
 
@@ -582,8 +584,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _layouts_header_header_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./layouts/header/header.component */ "./src/app/layouts/header/header.component.ts");
-
 
 
 
@@ -600,7 +600,6 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"],
-                _layouts_header_header_component__WEBPACK_IMPORTED_MODULE_9__["HeaderComponent"],
             ],
             entryComponents: [],
             imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"]],
@@ -613,61 +612,6 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/layouts/header/header.component.html":
-/*!******************************************************!*\
-  !*** ./src/app/layouts/header/header.component.html ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      <ion-icon name=\"home\"></ion-icon>Home\n    </ion-title>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n<ion-menu side=\"start\" contentId=\"first\">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n  <ion-content>\n    <ion-list>\n      <ion-item>Home</ion-item>\n      <ion-item routerLink=\"/category/category\">Category</ion-item>\n      <ion-item>Product</ion-item>\n      <ion-item>Raw Material</ion-item>\n      <ion-item>Supplier</ion-item>\n      <ion-item>Purchase</ion-item>\n      <ion-item>Sales</ion-item>\n      <ion-item>Order</ion-item>\n      <ion-item>Inventory Items</ion-item>\n      <ion-item>Production</ion-item>\n      <ion-item>Reports</ion-item>\n      <ion-item>Setting</ion-item>\n    </ion-list>\n  </ion-content>\n</ion-menu>"
-
-/***/ }),
-
-/***/ "./src/app/layouts/header/header.component.scss":
-/*!******************************************************!*\
-  !*** ./src/app/layouts/header/header.component.scss ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xheW91dHMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyJ9 */"
-
-/***/ }),
-
-/***/ "./src/app/layouts/header/header.component.ts":
-/*!****************************************************!*\
-  !*** ./src/app/layouts/header/header.component.ts ***!
-  \****************************************************/
-/*! exports provided: HeaderComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderComponent", function() { return HeaderComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-
-
-var HeaderComponent = /** @class */ (function () {
-    function HeaderComponent() {
-    }
-    HeaderComponent.prototype.ngOnInit = function () { };
-    HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-header',
-            template: __webpack_require__(/*! ./header.component.html */ "./src/app/layouts/header/header.component.html"),
-            styles: [__webpack_require__(/*! ./header.component.scss */ "./src/app/layouts/header/header.component.scss")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], HeaderComponent);
-    return HeaderComponent;
 }());
 
 

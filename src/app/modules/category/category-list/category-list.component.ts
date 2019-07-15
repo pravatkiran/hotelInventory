@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-category-list',
@@ -7,8 +8,43 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryListComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public actionSheetController: ActionSheetController
+  ) { }
 
-  ngOnInit() {}
+  async presentActionSheet(){
+    const actionSheet = await this.actionSheetController.create({
+      header: 'Actions',
+      mode: 'md',
+      buttons: [{
+        text: 'Delete',
+        role: 'destructive',
+        icon: 'trash',
+        handler: () =>{
+          console.log('Delete clicked');
+        }
+      },{
+        text: 'Edit',
+        icon: 'create',
+        handler: () =>{
+          console.log('Edit clicked');
+        }
+      },{
+        text: 'Cancel',
+        icon: 'close',
+        role: 'cancel',
+        handler: () =>{
+          console.log('Cancel clicked');
+        }
+      }
+    ]
+    });
+    await actionSheet.present();
+  }
+
+  ngOnInit() {
+  }
+
+
 
 }

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Jul 15 12:46:07 NPT 2019
+#Mon Jul 15 16:02:58 NPT 2019
 835.base=/home/pravat/Mahuri/hotelInventory/platforms/android/app/build/intermediates/assets/debug
 100.set=ASSET
 57.file=/home/pravat/Mahuri/hotelInventory/platforms/android/app/build/intermediates/assets/debug/www/svg/md-medal.svg

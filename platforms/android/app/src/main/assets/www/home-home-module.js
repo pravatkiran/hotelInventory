@@ -33005,11 +33005,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var ng2_google_charts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ng2-google-charts */ "./node_modules/ng2-google-charts/index.js");
-/* harmony import */ var _home_page__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./home.page */ "./src/app/home/home.page.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var ng2_google_charts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ng2-google-charts */ "./node_modules/ng2-google-charts/index.js");
+/* harmony import */ var _home_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./home.page */ "./src/app/home/home.page.ts");
+/* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../shared/shared.module */ "./src/app/shared/shared.module.ts");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+
 
 
 
@@ -33025,17 +33027,18 @@ var HomePageModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
-                _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonicModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"].forChild([
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+                _shared_shared_module__WEBPACK_IMPORTED_MODULE_7__["SharedModule"],
+                _ionic_angular__WEBPACK_IMPORTED_MODULE_8__["IonicModule"],
+                _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forChild([
                     {
                         path: '',
-                        component: _home_page__WEBPACK_IMPORTED_MODULE_7__["HomePage"]
+                        component: _home_page__WEBPACK_IMPORTED_MODULE_6__["HomePage"]
                     }
                 ]),
-                ng2_google_charts__WEBPACK_IMPORTED_MODULE_6__["Ng2GoogleChartsModule"]
+                ng2_google_charts__WEBPACK_IMPORTED_MODULE_5__["Ng2GoogleChartsModule"]
             ],
-            declarations: [_home_page__WEBPACK_IMPORTED_MODULE_7__["HomePage"]]
+            declarations: [_home_page__WEBPACK_IMPORTED_MODULE_6__["HomePage"]]
         })
     ], HomePageModule);
     return HomePageModule;
@@ -33052,7 +33055,7 @@ var HomePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-content>\n  <ion-card id=\"mainCard\">\n    <ion-card id=\"data\">\n      <ion-card-header>\n        <ion-title>Products</ion-title>\n      </ion-card-header>\n      <ion-card-content>\n        <canvas #doughnutCanvas></canvas>\n      </ion-card-content>\n    </ion-card>\n    <ion-card id=\"anotherData\">\n      <ion-card-header>\n        <ion-title>Raw Materials</ion-title>\n      </ion-card-header>\n      <ion-card-content>\n        <canvas #anotherCanvas></canvas>\n      </ion-card-content>\n    </ion-card>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      <ion-title>Daily Outline</ion-title>\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #lineCanvas></canvas>\n    </ion-card-content>\n  </ion-card>\n</ion-content>"
+module.exports = "<app-header></app-header>\n<ion-content>\n  <ion-card id=\"mainCard\">\n    <ion-card id=\"data\">\n      <ion-card-header>\n        <ion-title>Products</ion-title>\n      </ion-card-header>\n      <ion-card-content>\n        <canvas #doughnutCanvas></canvas>\n      </ion-card-content>\n    </ion-card>\n    <ion-card id=\"anotherData\">\n      <ion-card-header>\n        <ion-title>Raw Materials</ion-title>\n      </ion-card-header>\n      <ion-card-content>\n        <canvas #anotherCanvas></canvas>\n      </ion-card-content>\n    </ion-card>\n  </ion-card>\n  <ion-card>\n    <ion-card-header>\n      <ion-title>Daily Outline</ion-title>\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #lineCanvas></canvas>\n    </ion-card-content>\n  </ion-card>\n</ion-content>"
 
 /***/ }),
 
@@ -33063,7 +33066,7 @@ module.exports = "<ion-content>\n  <ion-card id=\"mainCard\">\n    <ion-card id=
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#mainCard {\n  margin-top: 58px; }\n\n#data {\n  background-color: rgba(0, 255, 255, 0.267);\n  margin-right: 689px; }\n\n#anotherData {\n  background-color: rgba(0, 255, 255, 0.267);\n  margin-left: 689px;\n  margin-top: -378px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3ByYXZhdC9NYWh1cmkvaG90ZWxJbnZlbnRvcnkvc3JjL2FwcC9ob21lL2hvbWUucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksZ0JBQWdCLEVBQUE7O0FBR3BCO0VBQ0ksMENBQTBDO0VBQzFDLG1CQUFtQixFQUFBOztBQUd2QjtFQUNJLDBDQUEwQztFQUMxQyxrQkFBa0I7RUFDbEIsa0JBQWtCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9ob21lL2hvbWUucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI21haW5DYXJkIHtcbiAgICBtYXJnaW4tdG9wOiA1OHB4O1xufVxuXG4jZGF0YSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAyNTUsIDI1NSwgMC4yNjcpO1xuICAgIG1hcmdpbi1yaWdodDogNjg5cHg7XG59XG5cbiNhbm90aGVyRGF0YSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAyNTUsIDI1NSwgMC4yNjcpO1xuICAgIG1hcmdpbi1sZWZ0OiA2ODlweDtcbiAgICBtYXJnaW4tdG9wOiAtMzc4cHg7XG59XG4iXX0= */"
+module.exports = "#data {\n  background-color: rgba(0, 255, 255, 0.267);\n  margin-right: 689px; }\n\n#anotherData {\n  background-color: rgba(0, 255, 255, 0.267);\n  margin-left: 689px;\n  margin-top: -378px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3ByYXZhdC9NYWh1cmkvaG90ZWxJbnZlbnRvcnkvc3JjL2FwcC9ob21lL2hvbWUucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBO0VBQ0ksMENBQTBDO0VBQzFDLG1CQUFtQixFQUFBOztBQUd2QjtFQUNJLDBDQUEwQztFQUMxQyxrQkFBa0I7RUFDbEIsa0JBQWtCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9ob21lL2hvbWUucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4jZGF0YSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAyNTUsIDI1NSwgMC4yNjcpO1xuICAgIG1hcmdpbi1yaWdodDogNjg5cHg7XG59XG5cbiNhbm90aGVyRGF0YSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAyNTUsIDI1NSwgMC4yNjcpO1xuICAgIG1hcmdpbi1sZWZ0OiA2ODlweDtcbiAgICBtYXJnaW4tdG9wOiAtMzc4cHg7XG59XG4iXX0= */"
 
 /***/ }),
 
