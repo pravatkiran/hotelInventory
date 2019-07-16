@@ -1,0 +1,29 @@
+<app-header></app-header>
+<ion-content>
+  <ion-card color="primary">
+    <ion-card-header>
+      <ion-card-title>Suppliers</ion-card-title>
+    </ion-card-header>
+    <ion-list>
+      <ion-item>
+        <ion-label>S.No</ion-label>
+        <ion-label>Name</ion-label>
+        <ion-label>Address</ion-label>
+        <ion-label>Contact No</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-list (click)="presentActionSheet()">
+      <ion-item>
+        <ion-label>1</ion-label>
+        <ion-label>Divine</ion-label>
+        <ion-label>Bharatpur-27</ion-label>
+        <ion-label>480805350</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+</ion-content>
