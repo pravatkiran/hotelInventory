@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActionSheetController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-purchase-list',
@@ -9,7 +10,8 @@ import { ActionSheetController } from '@ionic/angular';
 export class PurchaseListComponent implements OnInit {
 
   constructor(
-    public actionSheetController: ActionSheetController
+    public actionSheetController: ActionSheetController,
+    private _router: Router
   ) { }
 
   ngOnInit() {}
@@ -22,6 +24,7 @@ export class PurchaseListComponent implements OnInit {
         icon: 'eye',
         handler: () =>{
           console.log('View clicked');
+          this._router.navigateByUrl('/purchase/view')
         }
       }, {
         text: 'Delete',
