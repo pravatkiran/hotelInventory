@@ -5,9 +5,10 @@ import { ProductRoutingModule } from './product-routing.module';
 import { ProductListComponent } from './product-list/product-list.component';
 import { IonicModule } from '@ionic/angular';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { ProductFormComponent } from './product-form/product-form.component';
 
 @NgModule({
-  declarations: [ProductListComponent],
+  declarations: [ProductListComponent, ProductFormComponent],
   imports: [
     CommonModule,
     ProductRoutingModule,
