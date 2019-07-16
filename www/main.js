@@ -441,6 +441,11 @@ var map = {
 		"./src/app/modules/category/category.module.ts",
 		"common",
 		"modules-category-category-module"
+	],
+	"./modules/product/product.module": [
+		"./src/app/modules/product/product.module.ts",
+		"common",
+		"modules-product-product-module"
 	]
 };
 function webpackAsyncContext(req) {
@@ -484,7 +489,8 @@ __webpack_require__.r(__webpack_exports__);
 var routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', loadChildren: './home/home.module#HomePageModule' },
-    { path: 'category', loadChildren: './modules/category/category.module#CategoryModule' }
+    { path: 'category', loadChildren: './modules/category/category.module#CategoryModule' },
+    { path: 'product', loadChildren: './modules/product/product.module#ProductModule' }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -511,7 +517,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-app>\n  <ion-menu side=\"start\" contentId=\"first\">\n    <ion-header>\n      <ion-toolbar>\n        <ion-title>Menu</ion-title>\n      </ion-toolbar>\n    </ion-header>\n    <ion-content>\n      <ion-list>\n        <ion-item routerLink=\"/category\">Category</ion-item>\n        <ion-item>Product</ion-item>\n        <ion-item>Raw Material</ion-item>\n        <ion-item>Supplier</ion-item>\n        <ion-item>Purchase</ion-item>\n        <ion-item>Sales</ion-item>\n        <ion-item>Order</ion-item>\n        <ion-item>Inventory Items</ion-item>\n        <ion-item>Production</ion-item>\n        <ion-item>Reports</ion-item>\n        <ion-item>Setting</ion-item>\n      </ion-list>\n    </ion-content>\n  </ion-menu>\n  <ion-router-outlet id=\"first\"></ion-router-outlet>\n</ion-app>"
+module.exports = "<ion-app>\n  <ion-menu side=\"start\" contentId=\"first\">\n    <ion-header>\n      <ion-toolbar>\n        <ion-title>Menu</ion-title>\n      </ion-toolbar>\n    </ion-header>\n    <ion-content>\n      <ion-list>\n        <ion-item routerLink=\"/category\">Category</ion-item>\n        <ion-item routerLink=\"/product\">Product</ion-item>\n        <ion-item>Raw Material</ion-item>\n        <ion-item>Supplier</ion-item>\n        <ion-item>Purchase</ion-item>\n        <ion-item>Sales</ion-item>\n        <ion-item>Order</ion-item>\n        <ion-item>Inventory Items</ion-item>\n        <ion-item>Production</ion-item>\n        <ion-item>Reports</ion-item>\n        <ion-item>Setting</ion-item>\n      </ion-list>\n    </ion-content>\n  </ion-menu>\n  <ion-router-outlet id=\"first\"></ion-router-outlet>\n</ion-app>"
 
 /***/ }),
 
