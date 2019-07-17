@@ -6,9 +6,10 @@ import { PurchaseListComponent } from './purchase-list/purchase-list.component';
 import { IonicModule } from '@ionic/angular';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { PurchaseViewComponent } from './purchase-view/purchase-view.component';
+import { PurchaseAddComponent } from './purchase-add/purchase-add.component';
 
 @NgModule({
-  declarations: [PurchaseListComponent, PurchaseViewComponent],
+  declarations: [PurchaseListComponent, PurchaseViewComponent, PurchaseAddComponent],
   imports: [
     CommonModule,
     PurchaseRoutingModule,
