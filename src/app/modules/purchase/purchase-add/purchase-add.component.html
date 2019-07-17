@@ -3,7 +3,7 @@
     <ion-buttons>
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    
+    <ion-title>Hotel Inventory</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
@@ -11,5 +11,22 @@
     <ion-card-header>
       <ion-card-title>Add Purchase</ion-card-title>
     </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Supplier Name</ion-label>
+        <ion-input placeholder="supplier name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Purchase Date</ion-label>
+        <ion-input placeholder="purchase date"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Bill Number</ion-label>
+        <ion-input placeholder="bill number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-button slot="end" type="button" color="primary">Save</ion-button>
+      </ion-item>
+    </ion-card-content>
   </ion-card>
 </ion-content>
