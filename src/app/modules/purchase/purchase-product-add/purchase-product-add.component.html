@@ -1,0 +1,41 @@
+<ion-content>
+  <ion-grid id="grid">
+    <!-- <ion-title>Add Item</ion-title> -->
+    <ion-list>
+      <ion-label>Product Name</ion-label>
+      <ion-item>
+        <ion-input placeholder="Enter product name"></ion-input>
+      </ion-item>
+      <ion-label>Quantity</ion-label>
+      <ion-item>
+        <ion-input placeholder="Enter quantity"></ion-input>
+      </ion-item>
+      <ion-label>Measurement Scale</ion-label>
+      <ion-item>
+        <ion-input placeholder="Enter measurement scale"></ion-input>
+      </ion-item>
+      <ion-label>Category</ion-label>
+      <ion-item>
+        <ion-input placeholder="Enter category"></ion-input>
+      </ion-item>
+      <ion-label>Type</ion-label>
+      <ion-select>
+        <ion-select-option value="product">Product</ion-select-option>
+        <ion-select-option value="service">Service</ion-select-option>
+        <ion-select-option value="add-on">Add-on</ion-select-option>
+        <ion-select-option value="raw material">Raw material</ion-select-option>
+      </ion-select>
+      <ion-label>Rate</ion-label>
+      <ion-item>
+        <ion-input placeholder="Enter rate of product"></ion-input>
+      </ion-item>
+      <ion-label>Total Price</ion-label>
+      <ion-item>
+        <ion-input placeholder="Enter total price"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-item>
+    <ion-button type="button" slot="end">Save</ion-button>
+    </ion-item>
+  </ion-grid>
+</ion-content>
