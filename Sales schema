@@ -1,0 +1,10 @@
+Sales
+ Order
+  Product
+   Category
+   Type
+   Price
+   quantity
+   Prepare time
+   Date
+   Total amount

@@ -1,0 +1,13 @@
+
+Inventory
+  In
+   Product  
+    Category
+    Type ( Service-product / Raw-material / add-on)
+    Quantity
+    
+  Out
+   Product
+   Category
+   Type
+   Quantity
