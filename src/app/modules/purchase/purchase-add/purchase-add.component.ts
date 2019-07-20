@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PopoverController } from '@ionic/angular';
+import { PurchaseProductAddComponent } from '../purchase-product-add/purchase-product-add.component';
 
 @Component({
   selector: 'app-purchase-add',
@@ -7,8 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PurchaseAddComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public popoverController: PopoverController
+  ) { }
 
   ngOnInit() {}
 
+  async presentPopover(click: any) {
+    const popover = await this.popoverController.create({
+      component: PurchaseProductAddComponent,
+      event: click,
+      translucent: true
+    });
+    return await popover.present();
+  } 
 }

@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons>
+    <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>Hotel Inventory</ion-title>
@@ -23,6 +23,21 @@
       <ion-item>
         <ion-label>Bill Number</ion-label>
         <ion-input placeholder="bill number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Products</ion-label>
+        <ion-input (click) = "presentPopover()">
+          <ion-list>
+            <ion-grid>
+              <ion-row>
+                <ion-col>Demo1</ion-col>
+                <ion-col>Demo2</ion-col>
+                <ion-col>Demo3</ion-col>
+                <ion-col>Demo4</ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-list>
+        </ion-input>
       </ion-item>
       <ion-item>
         <ion-button slot="end" type="button" color="primary">Save</ion-button>
