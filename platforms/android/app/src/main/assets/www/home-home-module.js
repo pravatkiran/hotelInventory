@@ -33066,7 +33066,7 @@ module.exports = "<app-header></app-header>\n<ion-content>\n  <ion-card id=\"mai
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#data {\n  background-color: rgba(0, 255, 255, 0.267);\n  margin-right: 689px; }\n\n#anotherData {\n  background-color: rgba(0, 255, 255, 0.267);\n  margin-left: 689px;\n  margin-top: -378px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3ByYXZhdC9NYWh1cmkvaG90ZWxJbnZlbnRvcnkvc3JjL2FwcC9ob21lL2hvbWUucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBO0VBQ0ksMENBQTBDO0VBQzFDLG1CQUFtQixFQUFBOztBQUd2QjtFQUNJLDBDQUEwQztFQUMxQyxrQkFBa0I7RUFDbEIsa0JBQWtCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9ob21lL2hvbWUucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4jZGF0YSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAyNTUsIDI1NSwgMC4yNjcpO1xuICAgIG1hcmdpbi1yaWdodDogNjg5cHg7XG59XG5cbiNhbm90aGVyRGF0YSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAyNTUsIDI1NSwgMC4yNjcpO1xuICAgIG1hcmdpbi1sZWZ0OiA2ODlweDtcbiAgICBtYXJnaW4tdG9wOiAtMzc4cHg7XG59XG4iXX0= */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5wYWdlLnNjc3MifQ== */"
 
 /***/ }),
 

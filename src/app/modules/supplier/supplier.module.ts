@@ -6,9 +6,10 @@ import { SupplierListComponent } from './supplier-list/supplier-list.component';
 import { IonicModule } from '@ionic/angular';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { SupplierFormComponent } from './supplier-form/supplier-form.component';
+import { SupplierViewComponent } from './supplier-view/supplier-view.component';
 
 @NgModule({
-  declarations: [SupplierListComponent, SupplierFormComponent],
+  declarations: [SupplierListComponent, SupplierFormComponent, SupplierViewComponent],
   imports: [
     CommonModule,
     SupplierRoutingModule,
