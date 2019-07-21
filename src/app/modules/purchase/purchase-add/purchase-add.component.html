@@ -27,15 +27,20 @@
       <ion-item>
         <ion-label>Products</ion-label>
         <ion-input (click)="presentPopover()">
-          <ion-list>
-            <ion-grid>
-            </ion-grid>
-          </ion-list>
         </ion-input>
       </ion-item>
       <ion-item>
-        <ion-button slot="end" type="button" color="primary">Save</ion-button>
+        <ion-label>Status</ion-label>
+        <ion-select>
+          <ion-select-option value="Paid">Paid</ion-select-option>
+          <ion-select-option value="Unpaid">Unpaid</ion-select-option>
+          <ion-select-option value="Pending">Pending</ion-select-option>
+        </ion-select>
       </ion-item>
+      <br>
+      <ion-label style="float: right">
+        <ion-button slot="end" type="button" color="primary">Save</ion-button>
+      </ion-label>
     </ion-card-content>
   </ion-card>
 </ion-content>
