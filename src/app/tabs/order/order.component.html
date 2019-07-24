@@ -1,0 +1,13 @@
+<app-header></app-header>
+<ion-content>
+  <ion-list class="accordion-list">
+    <ion-list header>
+        <button ion-item (click)="toogleSection(i)" detail-none [ngClass]="{'session-active':order.open,'section':!order.open}">
+          <ion-icon item-left name="arrow-forward" *ngIf="!order.open"></ion-icon>
+          <ion-icon item-left name="arrow-down" *ngIf="order.open"></ion-icon>
+          <p>Order No.1</p>  
+        </button>
+    </ion-list>
+  </ion-list>
+</ion-content>
+<app-footer></app-footer>
