@@ -442,6 +442,11 @@ var map = {
 		"common",
 		"modules-category-category-module"
 	],
+	"./modules/order/order.module": [
+		"./src/app/modules/order/order.module.ts",
+		"common",
+		"modules-order-order-module"
+	],
 	"./modules/product/product.module": [
 		"./src/app/modules/product/product.module.ts",
 		"common",
@@ -508,7 +513,8 @@ var routes = [
     { path: 'product', loadChildren: './modules/product/product.module#ProductModule' },
     { path: 'supplier', loadChildren: './modules/supplier/supplier.module#SupplierModule' },
     { path: 'purchase', loadChildren: './modules/purchase/purchase.module#PurchaseModule' },
-    { path: 'sales', loadChildren: './modules/sales/sales.module#SalesModule' }
+    { path: 'sales', loadChildren: './modules/sales/sales.module#SalesModule' },
+    { path: 'order', loadChildren: './modules/order/order.module#OrderModule' }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -535,7 +541,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-app>\n  <ion-menu side=\"start\" contentId=\"first\">\n    <ion-header>\n      <ion-toolbar>\n        <ion-title>Menu</ion-title>\n      </ion-toolbar>\n    </ion-header>\n    <ion-content>\n      <ion-list>\n        <ion-item routerLink=\"/category\">Category</ion-item>\n        <ion-item routerLink=\"/product\">Product</ion-item>\n        <ion-item routerLink=\"/product/raw-material\">Raw Material</ion-item>\n        <ion-item routerLink=\"/supplier\">Supplier</ion-item>\n        <ion-item routerLink=\"/purchase\">Purchase</ion-item>\n        <ion-item routerLink=\"/sales\">Sales</ion-item>\n        <ion-item>Order</ion-item>\n        <ion-item>Inventory Items</ion-item>\n        <ion-item>Production</ion-item>\n        <ion-item>Reports</ion-item>\n        <ion-item>Setting</ion-item>\n      </ion-list>\n    </ion-content>\n  </ion-menu>\n  <ion-router-outlet id=\"first\"></ion-router-outlet>\n</ion-app>"
+module.exports = "<ion-app>\n  <ion-menu side=\"start\" contentId=\"first\">\n    <ion-header>\n      <ion-toolbar>\n        <ion-title>Menu</ion-title>\n      </ion-toolbar>\n    </ion-header>\n    <ion-content>\n      <ion-list>\n        <ion-item routerLink=\"/category\">Category</ion-item>\n        <ion-item routerLink=\"/product\">Product</ion-item>\n        <ion-item routerLink=\"/product/raw-material\">Raw Material</ion-item>\n        <ion-item routerLink=\"/supplier\">Supplier</ion-item>\n        <ion-item routerLink=\"/purchase\">Purchase</ion-item>\n        <ion-item routerLink=\"/sales\">Sales</ion-item>\n        <ion-item routerLink=\"/order\">Order</ion-item>\n        <ion-item>Inventory Items</ion-item>\n        <ion-item>Production</ion-item>\n        <ion-item>Reports</ion-item>\n        <ion-item>Setting</ion-item>\n      </ion-list>\n    </ion-content>\n  </ion-menu>\n  <ion-router-outlet id=\"first\"></ion-router-outlet>\n</ion-app>"
 
 /***/ }),
 
